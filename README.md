@@ -45,6 +45,6 @@ Visual studio code
 [How to validate ARM template](https://docs.microsoft.com/en-us/cli/azure/group/deployment?view=azure-cli-latest#az-group-deployment-validate)
 
 ## Azure button
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Fhadr10%2Ftechtalk%2Fblob%2Fmaster%2Fstorage.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhadr10%2Ftechtalk%2Fmaster%2Fstorage.json" target="_blank">
 <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
