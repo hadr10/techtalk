@@ -36,8 +36,11 @@ and we will select for example 101-storage-account-create
     ```
 5. Run deployment for prod
     ```
-    az group deployment create -g testaks2 --template-file storage.json --parameters storage-prod.parameters.json
+    az group deployment create -g testaks --template-file storage.json --parameters storage-prod.parameters.json
     ```
+6. Run blank template with complete mode
+
+
 
 ## Where to store ARM Templates?
 GitHub, GitLab
