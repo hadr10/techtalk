@@ -24,15 +24,19 @@ and we will select for example 101-storage-account-create
 
 2. Create resource group if you don't have
     ```
-    az group create --name test --location southeastasia
+    az group create --name testaks --location southeastasia
     ```
-3. Run deployment for dev
+3. Validate deployment
     ```
-    az group deployment create -g test --template-file storage.json --parameters storage-dev.parameters.json
+    az group deployment validate -g testaks --template-file storage.json --parameters storage-dev.parameters.json
     ```
-4. Run deployment for prod
+4. Run deployment for dev
     ```
-    az group deployment create -g test2 --template-file storage.json --parameters storage-prod.parameters.json
+    az group deployment create -g testaks --template-file storage.json --parameters storage-dev.parameters.json
+    ```
+5. Run deployment for prod
+    ```
+    az group deployment create -g testaks2 --template-file storage.json --parameters storage-prod.parameters.json
     ```
 
 ## Where to store ARM Templates?
