@@ -1,8 +1,4 @@
-# ARM Templates in TechTalk
-## Introduction
-Myself and info about me.
-
-Why i choosed this topic?
+# Basic ARM Templates
 
 ## Azure quickstart templates
 
@@ -53,9 +49,6 @@ Visual Studio Code. Please install also these extensions to Visual Studio Code:
 
 ## Validation of ARM Template?
 [How to validate ARM template](https://docs.microsoft.com/en-us/cli/azure/group/deployment?view=azure-cli-latest#az-group-deployment-validate)
-
-## Table of contents
-- [Storage](storage/readme.md)
 
 ## Azure button
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhadr10%2Ftechtalk%2Fmaster%2Fstorage.json" target="_blank">
