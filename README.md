@@ -61,3 +61,5 @@ Visual Studio Code. Please install also these extensions to Visual Studio Code:
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhadr10%2Ftechtalk%2Fmaster%2Fstorage.json" target="_blank">
 <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
+
+deployment center - github
