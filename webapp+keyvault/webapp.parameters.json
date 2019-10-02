@@ -13,6 +13,9 @@
       },
     "branch": {
       "value": "master"
-     }
+     },
+    "keyVaultName": {
+      "value": "techtalkidkeyvault"
+    }
   }
 }

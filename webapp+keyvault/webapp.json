@@ -33,11 +33,21 @@
         "metadata": {
           "description": "The branch of github repository to deploy"
         }
+      },
+      "keyVaultName": {
+        "type": "string",
+        "metadata": {
+          "description": "key vault name"
+        }
       }
     },
     "variables": {
       "webAppPortalName": "[concat(parameters('webAppName'), '-webapp')]",
-      "appServicePlanName": "[concat('AppServicePlan-', parameters('webAppName'))]"
+      "appServicePlanName": "[concat('AppServicePlan-', parameters('webAppName'))]",
+      "skuname": "Standard",
+      "enabledForDeployment": true,
+      "enabledForDiskEncryption": true,
+      "enabledForTemplateDeployment": true
     },
     "resources": [
       {
@@ -79,6 +89,29 @@
               }
           }
         ]
+      },
+      {
+        "type": "Microsoft.KeyVault/vaults",
+        "name": "[parameters('keyVaultName')]",
+        "apiVersion": "2018-02-14",
+        "location": "[resourceGroup().location]",
+        "properties": {
+          "enabledForDeployment": "[variables('enabledForDeployment')]",
+          "enabledForDiskEncryption": "[variables('enabledForDiskEncryption')]",
+          "enabledForTemplateDeployment": "[variables('enabledForTemplateDeployment')]",
+          "tenantId": "[subscription().tenantId]",
+          "sku": {
+            "name": "[variables('skuName')]",
+            "family": "A"
+          },
+          "accessPolicies":[],
+          "networkAcls": {
+            "value": {
+              "defaultAction": "Allow",
+              "bypass": "AzureServices"
+            }
+          }
+        }
       }
     ]
   }
