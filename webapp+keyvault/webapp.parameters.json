@@ -5,8 +5,14 @@
 		"webAppName": {
 			"value": "testidtechtalk"
           },
-        "sku": {
-            "value": "F1"
-        }
+    "sku": {
+      "value": "F1"
+      },
+    "repourl": {
+      "value": "https://github.com/hadr10/techtalk-web"
+      },
+    "branch": {
+      "value": "master"
      }
   }
+}

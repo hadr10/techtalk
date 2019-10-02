@@ -21,6 +21,18 @@
         "metadata": {
           "description": "Location for all resources"
         }
+      },
+      "repourl": {
+        "type": "string",
+        "metadata": {
+          "description": "URL for github project"
+        }
+      },
+      "branch": {
+        "type": "string",
+        "metadata": {
+          "description": "The branch of github repository to deploy"
+        }
       }
     },
     "variables": {
@@ -51,7 +63,22 @@
         },
         "dependsOn": [
           "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
-        ]
+        ],
+          "resources": [
+          {
+          "apiVersion": "2015-08-01",
+          "name": "web",
+          "type": "sourcecontrols",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', variables('webAppPortalName'))]"
+          ],
+          "properties": {
+            "RepoUrl": "[parameters('repourl')]",
+            "branch": "[parameters('branch')]",
+            "IsManualIntegration": true
+          }
+        }
+      ]
       }
     ]
   }

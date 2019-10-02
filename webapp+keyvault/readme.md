@@ -1,5 +1,7 @@
 az group deployment create -g test --template-file webapp.json --parameters webapp.parameters.json
 
+Pridat tvorbu key vaultu
+
 create key vault
 
 vytvorim secret - password
