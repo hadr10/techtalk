@@ -19,8 +19,6 @@
 Go to [website](https://techtalkidweb-webapp.azurewebsites.net/
 )
 
-app service managed identity - system assigned
-
 @Microsoft.KeyVault(SecretUri=https://testtechtalkid.vault.azure.net/secrets/password/b21b48104a38440ba42bac11aec7e7f7)
 
 toto vyse dam do application settings

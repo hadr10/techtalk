@@ -108,7 +108,15 @@
           "type": "SystemAssigned"
         },
         "properties": {
-          "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+          "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
+          "name": "[variables('webAppPortalName')]",
+          "siteConfig": {
+            "appSettings": [
+            {
+              "name": "test",
+              "value": "test"
+            }
+            ]
         },
         "dependsOn": [
           "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
@@ -128,6 +136,7 @@
               }
           }
         ]
+        }
       },
       {
         "type": "Microsoft.KeyVault/vaults",
