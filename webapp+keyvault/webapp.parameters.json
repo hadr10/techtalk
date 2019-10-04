@@ -22,9 +22,6 @@
     },
     "secretName": {
       "value": "test"
-    },
-    "secretValue": {
-      "value": "test"
     }
   }
 }

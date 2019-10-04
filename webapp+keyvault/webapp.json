@@ -104,13 +104,16 @@
         "kind": "app",
         "name": "[variables('webAppPortalName')]",
         "location": "[parameters('location')]",
+        "identity": {
+          "type": "SystemAssigned"
+        },
         "properties": {
           "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
         },
         "dependsOn": [
           "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
         ],
-          "resources": [
+        "resources": [
           {
             "apiVersion": "2018-02-01",
             "name": "web",
@@ -148,6 +151,14 @@
               "keys": "[parameters('keysPermissions')]",
               "secrets": "[parameters('secretsPermissions')]"
               }
+            },
+            {
+              "tenantId": "[reference(concat('Microsoft.Web/sites/',  variables('webAppPortalName'), '/providers/Microsoft.ManagedIdentity/Identities/default'), '2015-08-31-PREVIEW').tenantId]",
+              "objectId": "[reference(concat('Microsoft.Web/sites/',  variables('webAppPortalName'), '/providers/Microsoft.ManagedIdentity/Identities/default'), '2015-08-31-PREVIEW').principalId]",
+              "permissions": {
+              "keys": "[parameters('keysPermissions')]",
+              "secrets": "[parameters('secretsPermissions')]"
+              }
             }
           ],
           "networkAcls": {
@@ -159,16 +170,16 @@
         }
       },
       {
-      "type": "Microsoft.KeyVault/vaults/secrets",
-      "name": "[concat(parameters('keyVaultName'), '/', parameters('secretName'))]",
-      "apiVersion": "2018-02-14",
-      "location": "[parameters('location')]",
-      "dependsOn": [
-        "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
-      ],
-      "properties": {
-        "value": "[parameters('secretValue')]"
+        "type": "Microsoft.KeyVault/vaults/secrets",
+        "name": "[concat(parameters('keyVaultName'), '/', parameters('secretName'))]",
+        "apiVersion": "2018-02-14",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
+        ],
+        "properties": {
+          "value": "[parameters('secretValue')]"
+        }
       }
-    }
     ]
   }

@@ -18,10 +18,6 @@
 
 Go to [website](https://techtalkidweb-webapp.azurewebsites.net/
 )
-vytvorim secret - password
-https://techtalkidwebkeyvault.vault.azure.net/secrets/password/b21b48104a38440ba42bac11aec7e7f7
-
-nastavit prava pro muj ucet
 
 app service managed identity - system assigned
 
