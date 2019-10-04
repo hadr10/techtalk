@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"webAppName": {
-			"value": "testidtechtalk"
+			"value": "techtalkidweb"
           },
     "sku": {
       "value": "F1"
@@ -14,8 +14,17 @@
     "branch": {
       "value": "master"
      },
+    "objectId": {
+      "value": "5347a049-e67d-41c4-b422-437d99cdaae5"
+    },
     "keyVaultName": {
-      "value": "techtalkidkeyvault"
+      "value": "techtalkidwebkeyvault"
+    },
+    "secretName": {
+      "value": "test"
+    },
+    "secretValue": {
+      "value": "test"
     }
   }
 }
