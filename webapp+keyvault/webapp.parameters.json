@@ -8,20 +8,11 @@
     "sku": {
       "value": "F1"
       },
-    "repourl": {
-      "value": "https://github.com/hadr10/techtalk-web"
-      },
-    "branch": {
-      "value": "master"
-     },
-    "objectId": {
-      "value": "5347a049-e67d-41c4-b422-437d99cdaae5"
-    },
-    "keyVaultName": {
-      "value": "techtalkidwebkeyvault"
-    },
-    "secretName": {
-      "value": "test"
-    }
+      "repourl": {
+        "value": "https://github.com/hadr10/techtalk-web"
+        },
+      "branch": {
+        "value": "master"
+       }
   }
 }
