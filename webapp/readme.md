@@ -1,4 +1,4 @@
-# Readme to web application
+# Web application
 
 1. Login to azure
     ```
