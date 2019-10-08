@@ -63,7 +63,15 @@
         },
         "properties": {
           "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
-          "name": "[variables('webAppPortalName')]"
+          "name": "[variables('webAppPortalName')]",
+          "siteConfig":{
+            "appSettings": [
+              {
+                "name": "test",
+                "value": "test"
+              }
+            ]
+          }
         },
         "resources": [
             {
