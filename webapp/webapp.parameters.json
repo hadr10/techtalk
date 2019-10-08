@@ -4,7 +4,7 @@
 	"parameters": {
 		"webAppName": {
 			"value": "techtalkidweb"
-          },
+      },
     "sku": {
       "value": "F1"
       },
@@ -13,6 +13,6 @@
       },
     "branch": {
       "value": "master"
+      }
     }
-  }
 }
