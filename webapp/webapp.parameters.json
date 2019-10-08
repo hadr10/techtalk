@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"webAppName": {
+			"value": "techtalkidweb"
+          },
+    "sku": {
+      "value": "F1"
+      },
+    "repourl": {
+      "value": "https://github.com/hadr10/techtalk-web"
+      },
+    "branch": {
+      "value": "master"
+    }
+  }
+}
