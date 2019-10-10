@@ -20,3 +20,13 @@
 
 Go to [website](https://techtalkidweb-webapp.azurewebsites.net/)
 
+
+Secret uri:
+```
+https://techtalkidwebkeyvault.vault.azure.net/secrets/techtalkid/4cf60922ef8b403388c79ad30e1883ac
+```
+
+App setting:
+```
+@Microsoft.KeyVault(SecretUri=https://techtalkidwebkeyvault.vault.azure.net/secrets/techtalkid/4cf60922ef8b403388c79ad30e1883ac)
+```
